@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
 """
-Phase 4: Publication-Ready Visualizations & Summary Tables (1981–2025)
-Generates 8 standalone, single-panel, high-resolution (300 DPI) publication figures
-in sequential manuscript order (Figure 1 to Figure 8):
+Phase 4: Plotting the Final Figures (1981–2025)
+
+Description: This script generates the 8 final charts for my paper. 
+I set them up to export at high resolution (300 DPI) so they are ready for publication. 
+They export in the exact order they appear in the manuscript:
+
 - Fig1_CrossValidation_Daily_Scatter_Density.png
 - Fig2_Monthly_Climatology_Microclimate_Offset.png
 - Fig3_Annual_Tmin_Warming_Trends_1981_2025.png
@@ -218,7 +221,7 @@ def main():
     fig.savefig(OUT_DIR / "Fig5_Diurnal_Temperature_Range_Compression_1981_2025.png")
     plt.close(fig)
 
-    # FIGURE 6 (Sequential Manuscript Order: Monthly Warming Asymmetry Profile)
+    # FIGURE 6 Monthly Warming Asymmetry Profile
     fig, ax = plt.subplots(figsize=(10.2, 6.5))
     sub_cons_max = df_m_trd[(df_m_trd["Dataset"] == "Consensus Ensemble") & (df_m_trd["Variable"] == "Tmax")].sort_values("Month_Num")
     sub_cons_min = df_m_trd[(df_m_trd["Dataset"] == "Consensus Ensemble") & (df_m_trd["Variable"] == "Tmin")].sort_values("Month_Num")
