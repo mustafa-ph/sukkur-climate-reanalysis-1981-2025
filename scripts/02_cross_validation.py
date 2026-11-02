@@ -15,7 +15,7 @@ import numpy as np
 import pandas as pd
 from scipy import stats
 
-# Support both standalone repo execution (data/processed/) and VM sandbox execution
+# Setup paths depending on whether I'm running this locally or in the VM
 BASE_DIR = Path("/working_dir/c_546465af28aa3c43")
 if (BASE_DIR / "artifacts/file_generation/ttl=63d/output/Sukkur_Climate_Master_Daily_1981_2025.csv").exists():
     PROCESSED_DIR = BASE_DIR / "artifacts/file_generation/ttl=63d/output"
@@ -82,7 +82,7 @@ def main():
     print(f"Loading Harmonized Daily Master Dataset: {DAILY_MASTER_FILE}")
     df_daily = pd.read_csv(DAILY_MASTER_FILE, parse_dates=["Date"])
 
-    # 1. Construct Monthly Series (540 months: 1981-01 to 2025-12)
+    # 1. Roll up daily data into monthly averages
     df_monthly = df_daily.groupby(["Year", "Month"], as_index=False).agg(
         ERA5_Tmean_C=("ERA5_Tmean_C", "mean"),
         ERA5_Tmax_C=("ERA5_Tmax_C", "mean"),
@@ -114,7 +114,7 @@ def main():
     ]
 
     summary_rows = []
-    # Multi-timescale cross-validation (All Data)
+    # Calculate validation metrics across all time scales
     for e_col, p_col, v_label in var_pairs:
         summary_rows.append(compute_validation_metrics(df_daily, e_col, p_col, "Daily", "All Days (1981-2025)", v_label))
         summary_rows.append(compute_validation_metrics(df_monthly, e_col, p_col, "Monthly", "All Months (1981-2025)", v_label))
