@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 """
 Phase 3: Core Statistical Trend Analysis (1981–2025)
-Study: Shifting Summer Temperatures, Earlier Spring Heat Arrival, and Rising Warm Nights
-       in Sukkur, Pakistan (1981–2025): Insights from ERA5-Land and NASA POWER Reanalyses
+
+Description: This script calculates the long-term temperature trends for my Sukkur dataset. 
+I am using it to track a few key shifts over the last 45 years: 
+how our core summer days are changing, how much earlier the extreme spring heat is arriving, and how rapidly our nighttime temperatures are rising. 
 """
 
 from pathlib import Path
