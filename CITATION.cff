@@ -3,7 +3,7 @@ message: "If you use this dataset or analysis code, please cite it as below."
 title: "Shifting Summer Temperatures, Earlier Spring Heat Arrival, and Rising Warm Nights in Sukkur, Pakistan (1981–2025): Insights from ERA5-Land and NASA POWER Reanalyses"
 authors:
   - family-names: "Phulpoto"
-    given-names: "Mustafa"
+    given-names: "Ghulam Mustafa"
 version: 1.0.0
 date-released: 2026-11-02
 url: "https://github.com/mustafa-ph/sukkur-climate-reanalysis-1981-2025"
