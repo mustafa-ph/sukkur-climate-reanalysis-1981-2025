@@ -2,10 +2,10 @@
 """
 Phase 2: Cross-Validation & Microclimate Analysis (1981–2025)
 
-Description: In this script, I'm checking how well the ERA5-Land and NASA POWER datasets actually match up across daily, monthly, and yearly timeframes. 
+Description: This script checks how well the ERA5-Land and NASA POWER datasets align across daily, monthly, and yearly timeframes. 
 
-I'm also measuring the "microclimate offset" between the two models. Because ERA5-Land has a tighter grid (~9 km), it picks up the cooling effect from the Indus River and 
-local canal irrigation. 
+I've also measured the "microclimate offset" between the two models. 
+Because ERA5-Land has a tighter grid (~9 km), it picks up the cooling effect from the Indus River and local canal irrigation. 
 NASA POWER (~50 km) is much broader, so it blends our irrigated areas with the hotter, dry desert air from the surrounding Thar/Rohri margins.
 """
 
