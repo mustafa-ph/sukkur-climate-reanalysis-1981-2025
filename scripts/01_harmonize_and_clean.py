@@ -1,12 +1,10 @@
 #!/usr/bin/env python3
 """
-Harmonization, Quality Control, and Climatological Trend Analysis of 2-Meter Air Temperature
-over Sukkur, Sindh, Pakistan (1981–2025): A Comparative Reanalysis of ECMWF ERA5-Land and NASA POWER (MERRA-2)
+Temperature Trend Analysis: Sukkur, Pakistan (1981–2025)
 
-Author: Climate Research Pipeline
-Location: Sukkur, Sindh, Pakistan (ERA5-Land grid: 27.70°N, 68.80°E; NASA POWER point: 27.72°N, 68.82°E)
-Time Zone Standard: Pakistan Standard Time (PKT, UTC+5) / Local Solar Time (LST)
-Period: January 1, 1981 – December 31, 2025 (45 complete years; 16,436 days)
+Author: Ghulam Mustafa
+Description: This script cleans and compares 45 years of daily temperature data from two models (ERA5-Land and NASA POWER). 
+I use it to calculate local climate trends, heatwaves, and temperature differences.
 """
 
 import os
