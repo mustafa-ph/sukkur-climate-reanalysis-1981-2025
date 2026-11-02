@@ -5,6 +5,7 @@ authors:
   - family-names: "Phulpoto"
     given-names: "Ghulam Mustafa"
 version: 1.0.0
+doi: 10.5281/zenodo.23890580
 date-released: 2026-11-02
 url: "https://github.com/mustafa-ph/sukkur-climate-reanalysis-1981-2025"
 keywords:
