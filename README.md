@@ -4,27 +4,12 @@
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-3776AB.svg)](https://www.python.org/)
 [![Study Period](https://img.shields.io/badge/Period-1981--2025%20(45%20Years)-orange.svg)](#)
 
-This repository contains the harmonized datasets, statistical validation and trend-detection tables, high-resolution (300 DPI) figures, and reproducible Python pipeline for the 45-year (1981–2025, N = 16,436 days) climatological investigation of 2-meter air temperatures over **Sukkur, Sindh, Pakistan** (27.70°N, 68.80°E), comparing **ECMWF ERA5-Land** (0.1° × 0.1°, ~9 km grid) and **NASA POWER / MERRA-2** (0.5° × 0.625°, ~50 km grid).
+This repository holds all the data, charts, and Python code for a 45-year (1981–2025) temperature study I did on Sukkur, Pakistan. I compared two major climate models (ERA5-Land and NASA POWER) to track local climate changes, and here are my key findings:
 
----
-
-## Key Empirical Findings
-
-1. **Multi-Timescale Phase Coherence & The Indus Oasis Evaporative Offset:**
-   - **High Phase Agreement:** Hourly-aggregated ERA5-Land (UTC+5) and daily NASA POWER exhibit strong temporal synchronicity across daily (r = 0.975–0.988, cRMSE = 1.38–1.84°C) and monthly (r = 0.992–0.995, Willmott's d = 0.951–0.996) scales.
-   - **Daytime Oasis Cooling vs. Desert Sensible Heating:** While nocturnal Tmin shows near-zero systematic bias (MBE = +0.233°C), daytime Tmax in NASA POWER is systematically warmer by +3.069°C—lowest during the January Sukkur Barrage canal closure (+2.09°C) and peaking during July–September Kharif irrigation and monsoon river discharge (+3.48°C to +4.09°C).
-
-2. **Diurnal Warming Asymmetry & DTR Compression:**
-   - **Nocturnal Warming (Tmin):** Annual mean Tmin rose significantly at +0.214°C/decade (Z = +3.37, p = 0.00076***) in NASA POWER and +0.139°C/decade (Z = +2.68, p = 0.00735**) in the Consensus Ensemble.
-   - **Summer Daytime Buffering (Tmax):** Core summer (May–August) Tmax moderated by −0.226 to −0.274°C/decade (p < 0.006) under intensified irrigation and monsoon moisture.
-   - **DTR Compression:** Annual Diurnal Temperature Range (DTR = Tmax − Tmin) compressed rapidly across all series (−0.255°C/decade in ERA5-Land, −0.330°C/decade in NASA POWER, −0.293°C/decade in Consensus; all p ≤ 0.00003***).
-
-3. **Earlier Spring Arrival of Extreme Heat (DOY):**
-   - **February–April Warming Hotspot:** Late winter and spring represent the fastest-warming window of the calendar year (+0.33 to +0.46°C/decade, p < 0.05).
-   - **Advancing 40°C Onset:** In NASA POWER, the first annual occurrence of Tmax ≥ 40°C advanced by −3.00 days/decade (Z = −2.16, p = 0.0311*, shifting from April 5 in 1981–1995 to March 27 in 2011–2025), and the first sustained 3-day ≥ 40°C spell advanced by −2.92 days/decade (Z = −2.03, p = 0.0427*, from April 11 to April 2).
-
-4. **41% Surge in Sultry Tropical Warm Nights (Tmin ≥ 30°C):**
-   - **Nocturnal Heat Stress Escalation:** Annual Tropical Warm Nights (Tmin ≥ 30°C) surged by +41.1% in NASA POWER from 42.0 nights/year (1981–1995) to 59.3 nights/year (2011–2025) at +6.20 nights/decade (Z = +3.46, p = 0.00053***), and in the Consensus Ensemble from 30.7 to 42.2 nights/year at +4.36 nights/decade (Z = +2.99, p = 0.00282**).
+* **The oasis cooling effect:** Both datasets match up well overall, but NASA POWER records daytime highs about 3°C warmer. This happens because ERA5-Land better captures the local cooling effect from the Indus River and seasonal irrigation, while NASA treats the area more like a dry desert.
+* **Shrinking temperature gaps:** Our nights are getting steadily warmer, but our core summer days have actually cooled slightly due to that farming moisture. Because of this, the gap between our daytime highs and nighttime lows is shrinking rapidly.
+* **Earlier extreme heat:** Late winter and spring are warming faster than any other time of year. I found that our first 40°C day is showing up about three days earlier every decade, shifting from early April in the 1980s to late March today.
+* **A surge in hot nights:** We are experiencing way more nocturnal heat stress. Sticky, tropical nights (where the temperature never drops below 30°C) have jumped by 41%, climbing from about 42 nights a year to nearly 60.
 
 ---
 
