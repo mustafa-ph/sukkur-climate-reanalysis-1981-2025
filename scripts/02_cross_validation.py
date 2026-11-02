@@ -1,24 +1,14 @@
 #!/usr/bin/env python3
 """
-Phase 2: Dataset Cross-Validation & Microclimate Offset Analysis (1981–2025)
-Study: Harmonization, Quality Control, and Climatological Trend Analysis of 2-Meter Air Temperature
-       over Sukkur, Sindh, Pakistan (1981–2025): ECMWF ERA5-Land (~9 km) vs. NASA POWER / MERRA-2 (~50 km)
+Phase 2: Cross-Validation & Microclimate Analysis (1981–2025)
 
-Objectives:
-1. Evaluate statistical agreement across Daily (N = 16,436), Monthly (N = 540), and Annual (N = 45)
-   timescales for Tmean, Tmax, Tmin, and DTR using:
-   - Pearson correlation coefficient (r) and p-value
-   - Coefficient of Determination (R^2)
-   - Mean Bias Error (MBE = NASA_POWER - ERA5_Land, °C)
-   - Mean Absolute Error (MAE, °C)
-   - Root Mean Square Error (RMSE, °C)
-   - Willmott's Index of Agreement (d)
-   - Ordinary Least Squares (OLS) regression slope and intercept
-2. Quantify the seasonal and monthly microclimate offset driven by the spatial resolution contrast:
-   - ERA5-Land (0.1° x 0.1°, ~9 km grid centered at 27.70°N, 68.80°E) resolves the Indus River channel,
-     Sukkur Barrage headworks, and intensive perennial canal irrigation (evaporative/latent heat cooling).
-   - NASA POWER / MERRA-2 (0.5° x 0.625°, ~50 km grid centered at 27.72°N, 68.82°E) blends the irrigated
-     Indus corridor with the surrounding hyper-arid Thar/Rohri and Pat desert margins (higher sensible heat flux).
+Description: In this script, I'm checking how well the ERA5-Land and NASA POWER 
+datasets actually match up across daily, monthly, and yearly timeframes. 
+
+I'm also measuring the "microclimate offset" between the two models. Because ERA5-Land 
+has a tighter grid (~9 km), it picks up the cooling effect from the Indus River and 
+local canal irrigation. NASA POWER (~50 km) is much broader, so it blends our irrigated 
+areas with the hotter, dry desert air from the surrounding Thar/Rohri margins.
 """
 
 import os
